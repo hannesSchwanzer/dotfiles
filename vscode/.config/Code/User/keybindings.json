@@ -1,0 +1,75 @@
+// Place your key bindings in this file to override the defaults
+[
+    // Terminal
+    {
+        "key": "ctrl+t",
+        "command": "workbench.action.togglePanel"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+n",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus"
+    },
+
+    // File Explorer navigation
+    {
+        "command": "workbench.action.toggleSidebarVisibility",
+        "key": "ctrl+e"
+    },
+    {
+        "command": "workbench.files.action.focusFilesExplorer",
+        "key": "ctrl+e",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+5",
+        "command": "explorer.newFile",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "command": "renameFile",
+        "key": "shift+r",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "d",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletFocus"
+    },
+    {
+        "command": "deleteFile",
+        "key": "shift+d",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+
+    // EXTRA
+    {
+        "key": "ctrl+z",
+        "command": "workbench.action.toggleZenMode"
+    },
+    {
+        "command": "acceptSelectedSuggestion",
+        "key": "ctrl+y",
+        "when": "suggestWidgetVisible&&suggestWidgetHasFocusedSuggestion&&suggestionMakesTextEdit&&textInputFocus"
+    },
+    {
+        "command": "acceptSelectedCodeAction",
+        "key": "ctrl+y",
+        "when": "codeActionMenuVisible"
+    },
+]
