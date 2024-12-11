@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DOTFILES_DIR=~/dotfiles
-CONFIGS=("zsh" "nvim" "tmux" "vscode")
+CONFIGS=("zsh" "nvim" "tmux" "vscode" "ideavim")
 
 cd $DOTFILES_DIR
 
