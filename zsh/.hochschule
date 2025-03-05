@@ -1,0 +1,12 @@
+# Commands for university
+
+
+### Connect remote donut directory to local machine
+REMOTE_PATH="/data/stud/2024-masterprojekt-rishibalen-schwanzer/hannes/donut_funsd"
+LOCAL_MOUNT="$HOME/dev/master/llm_distillation/remote/"
+
+# Alias to mount SSHFS
+alias donut_connect='mkdir -p "$LOCAL_MOUNT" && sshfs -o cache=yes,kernel_cache,compression=no,reconnect "supergpu.hsrm:$REMOTE_PATH" "$LOCAL_MOUNT" && echo "Mounted supergpu at $LOCAL_MOUNT"'
+
+# Alias to unmount SSHFS
+alias donut_disconnect='if mountpoint -q "$LOCAL_MOUNT"; then fusermount -u "$LOCAL_MOUNT" || umount "$LOCAL_MOUNT"; echo "Unmounted $LOCAL_MOUNT"; else echo "Nothing to unmount"; fi'

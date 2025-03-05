@@ -128,8 +128,11 @@ export NVM_DIR="$HOME/.nvm"
 export PATH=/usr/local/cuda-12.6/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-12.6/lib64:$LD_LIBRARY_PATH
 
-alias masterprojekt="cd /home/hannes/dev/master/llm_distillation/donut_funsd/"
+alias masterprojekt="cd /home/hannes/dev/master/llm_distillation/llm_distillation/"
 alias master="cd /home/hannes/dev/master/"
 alias platio="source /home/hannes/.platformio/penv/bin/activate"
 
 export PATH=$PATH:/usr/local/go/bin
+
+source ~/.hochschule 
+
