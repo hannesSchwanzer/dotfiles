@@ -12,3 +12,10 @@ for config in "${CONFIGS[@]}"; do
 done
 
 echo "All dotfiles stowed!"
+
+# Call the tmux-specific install script (if tmux is in the configs list)
+if [[ " ${CONFIGS[@]} " =~ " tmux " ]]; then
+    echo "Running tmux-specific installation..."
+    ./tmux/install.sh  # Run the separate tmux install script
+fi
+
