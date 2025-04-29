@@ -133,6 +133,8 @@ alias master="cd /home/hannes/dev/master/"
 alias platio="source /home/hannes/.platformio/penv/bin/activate"
 
 export PATH=$PATH:/usr/local/go/bin
+export PATH="$HOME/scripts:$PATH"
 
 source ~/.hochschule 
 
+export PATH="$HOME/.local/kitty.app/bin:$PATH"
