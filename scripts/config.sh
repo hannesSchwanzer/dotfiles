@@ -1,4 +1,5 @@
 #!/bin/bash
+shopt -s dotglob 
 
 mkdir -p "$HOME/.config"
 
