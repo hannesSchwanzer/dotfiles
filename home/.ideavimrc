@@ -1,0 +1,144 @@
+" Set leader keys
+let mapleader = " "
+
+" General Settings
+
+" Set tab width
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
+" Show line number and make it relative
+set number
+set relativenumber
+
+" Enable mouse mode
+set mouse=a
+
+" Don't show the mode (already in status line)
+" set noshowmode
+set showmode
+set showcmd
+set visualbell
+
+" Sync clipboard between OS and Vim
+set clipboard=unnamedplus
+" set clipboard+=unnamed
+
+" Enable break indent
+set breakindent
+
+" Search
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+
+" Keep signcolumn on by default
+" set signcolumn=yes
+
+" Decrease update time
+" set updatetime=250
+" set timeoutlen=300
+
+" Configure split behavior
+set splitright
+set splitbelow
+
+" Display certain whitespace characters
+" set list
+" set listchars=tab:»\ ,trail:·,nbsp:␣
+
+" Preview substitutions live
+" set inccommand=split
+
+" Highlight the current cursor line
+set cursorline
+
+" Minimal number of screen lines to keep above and below the cursor
+set scrolloff=10
+
+" Plugins
+set surround
+set highlightedyank
+set nerdtree
+set which-key
+
+
+" Key mappings
+
+" Tab navigation
+nnoremap <A-n> :tabnext<CR>
+nnoremap <A-p> :tabprev<CR>\
+
+" Split navigation shortcuts
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+
+" Popup navigation
+inoremap <C-j> <Action>(PopupMenu-selectNext)
+inoremap <C-k> <Action>(PopupMenu-selectPrev)
+
+" Jump between methods
+nnoremap [[ <Action>(MethodUp)
+nnoremap ]] <Action>(MethodDown)
+
+" Move lines
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+" Indent lines
+vnoremap < <gv
+vnoremap > >gv
+
+" Comment lines
+map gc <action>(CommentByLineComment)
+
+map <leader>sf <action>(GotoFile)
+map <leader>s. <action>(RecentFiles)
+map <leader>sg <action>(FindInPath)
+
+map <leader>rn <Action>(RenameElement)
+
+" Go to code
+nmap <leader>gd <Action>(GotoDeclaration)
+nmap <leader>gy <Action>(GotoTypeDeclaration)
+nmap <leader>gi <Action>(GotoImplementation)
+nmap K <Action>(ShowUsages)
+
+map <leader>gs <Action>(ActivateVersionControlToolWindow)
+
+" Center screen when scrolling
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
+" Center screen when searching
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" Delete without copying
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+
+nnoremap x "_x
+vnoremap x "_x
+nnoremap X "_X
+vnoremap X "_X
+
+nnoremap c "_c
+vnoremap c "_c
+nnoremap C "_C
+vnoremap C "_C
+
+" File formatting (Removed: depends on LSP)
+" Bind <leader>f for another purpose or leave unbound.
+
+" Disable default Space key behavior
+
+" Replace word under cursor
+" nnoremap <leader>rw :%s/\<<C-r><C-w>\>//g<Left><Left>
+
+
